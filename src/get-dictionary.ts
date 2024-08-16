@@ -5,11 +5,11 @@ import type { Locale } from './i18n-config';
 // We also get the default import for cleaner types
 const dictionaries = {
 	en: () =>
-		import('./dictionaries/en.json').then(module => module.default),
+		import('../dictionaries/en.json').then(module => module.default),
 	bn: () =>
-		import('./dictionaries/bn.json').then(module => module.default),
+		import('../dictionaries/bn.json').then(module => module.default),
 	hn: () =>
-		import('./dictionaries/hn.json').then(module => module.default)
+		import('../dictionaries/hn.json').then(module => module.default)
 };
 
 export const getDictionary = async (locale: Locale) =>
